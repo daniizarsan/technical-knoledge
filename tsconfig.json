@@ -1,0 +1,58 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+        "lib": [
+            "es6",
+            "dom"
+        ],
+        "sourceMap": true,
+        "outDir": "./out",
+        "esModuleInterop": true,
+        "baseUrl": "./src",
+        "paths": {
+            "@auth/*": [
+                "auth/*"
+            ],
+            "@controller/*": [
+                "controller/*"
+            ],
+            "@database/*": [
+                "database/*"
+            ],
+            "@models/*": [
+                "models/*"
+            ],
+            "@router/*": [
+                "router/*"
+            ],
+            "@enums/*": [
+                "enums/*"
+            ],
+            "@utils/*": [
+                "utils/*"
+            ],
+            "@middleware/*": [
+                "middleware/*"
+            ],
+            "@queries": [
+                "database/query.database"
+            ],
+            "@database": [
+                "database/database"
+            ],
+            "@descendant": [
+                "utils/descendant.utils"
+            ],
+            "@params": [
+                "utils/params.utils"
+            ],
+            "@interfaces/*": [
+                "interfaces/*"
+            ],
+            "@config": [
+                "config"
+            ]
+        }
+    }
+}

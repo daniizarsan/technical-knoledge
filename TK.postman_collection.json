@@ -1,0 +1,426 @@
+{
+	"info": {
+		"_postman_id": "e3b11915-288c-48f0-9a26-4fa4abf2a802",
+		"name": "TK",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27225670",
+		"_collection_link": "https://tfg-back.postman.co/workspace/Team-Workspace~142fd24d-65fa-4a7a-85fd-ec3ea8a6d0ed/collection/27225670-e3b11915-288c-48f0-9a26-4fa4abf2a802?action=share&source=collection_link&creator=27225670"
+	},
+	"item": [
+		{
+			"name": "CRUD User",
+			"item": [
+				{
+					"name": "Get all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{IP}}:{{PORT}}/api/user",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get info user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{IP}}:{{PORT}}/api/user/:id",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Daniel",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "de la Zarza Sánchez",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{IP}}:{{PORT}}/api/user",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{IP}}:{{PORT}}/api/user/:id",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update all info",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Daniel",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "de la Zarza Sánchez",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{IP}}:{{PORT}}/api/user/:id",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update info",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Daniel",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "de la Zarza Sánchez",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{IP}}:{{PORT}}/api/user/:id",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Homes",
+			"item": [
+				{
+					"name": "Get user homes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{IP}}:{{PORT}}/api/user/:id/homes",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"user",
+								":id",
+								"homes"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filter list home",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{IP}}:{{PORT}}/api/user/:id/filtering?country=1&alias=Casa&type=dúplex",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"user",
+								":id",
+								"filtering"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "1"
+								},
+								{
+									"key": "alias",
+									"value": "Casa"
+								},
+								{
+									"key": "type",
+									"value": "dúplex"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete home",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{IP}}:{{PORT}}/api/user/:idUser/homes/:idHome",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"user",
+								":idUser",
+								"homes",
+								":idHome"
+							],
+							"variable": [
+								{
+									"key": "idUser",
+									"value": "1"
+								},
+								{
+									"key": "idHome",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add a new home",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "address",
+									"value": "Avenida Portugal",
+									"type": "text"
+								},
+								{
+									"key": "alias",
+									"value": "Casa",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "type",
+									"value": "chalet",
+									"type": "text"
+								},
+								{
+									"key": "id_country",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{IP}}:{{PORT}}/api/user/:id/homes",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"user",
+								":id",
+								"homes"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update info",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "address",
+									"value": "Avenida Portugal",
+									"type": "text"
+								},
+								{
+									"key": "alias",
+									"value": "Casa",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "dúplex",
+									"type": "text"
+								},
+								{
+									"key": "id_country",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{IP}}:{{PORT}}/api/user/:idUser/homes/:idHome",
+							"host": [
+								"{{IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"user",
+								":idUser",
+								"homes",
+								":idHome"
+							],
+							"variable": [
+								{
+									"key": "idUser",
+									"value": "1"
+								},
+								{
+									"key": "idHome",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
